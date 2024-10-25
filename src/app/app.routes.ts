@@ -3,10 +3,6 @@ import { Routes } from '@angular/router';
 export const routes: Routes = [
 	{
 		path: 'inspeccion-general',
-		loadComponent: () =>
-			import('./modules/inspeccion/pages/index/index.component').then(
-				(c) => c.IndexComponent
-			),
 		loadChildren: () =>
 			import('./modules/inspeccion/inspeccion.routes').then(
 				(c) => c.InspeccionRoutes
