@@ -5,10 +5,23 @@
 		height: '90%',
 		'margin-top': '6em',
 		'margin-left': '1em',
-		'border-radius': '0.5em'
+		'border-radius': '0.5em',
+		'overflow-y': 'auto'
 	}"
 >
 	<div class="flex justify-content-center">
-		<p-menu [model]="modules"></p-menu>
+		<ng-container>
+			<p-divider></p-divider>
+			@for (module of modules; track $index) {
+			<a [routerLink]="module.url" class="url-option">
+				<span
+					[class]="module.icon"
+					style="margin-right: 0.5em; font-size: 1.5rem"
+				></span>
+				<span class="ml-2">{{ module.name }}</span>
+			</a>
+			<p-divider></p-divider>
+			}
+		</ng-container>
 	</div>
 </p-sidebar>
