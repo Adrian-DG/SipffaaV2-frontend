@@ -1,0 +1,28 @@
+.not-found-container {
+	margin: auto;
+	width: 60%;
+	height: auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 0;
+	.title {
+		font-size: 15rem;
+		text-align: center;
+		background: -webkit-linear-gradient(#b1afaf, #333);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
+	.body {
+		width: 80%;
+		height: auto;
+		margin-top: -8em;
+		p {
+			text-align: center;
+			font-size: 3rem;
+			font-weight: bold;
+			color: gray;
+		}
+	}
+}
