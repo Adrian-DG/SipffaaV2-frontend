@@ -1,0 +1,37 @@
+<p-toolbar
+	styleClass="shadow-2"
+	[style]="{
+		'background-color': '#3236a8',
+		'border-radius': '0.5em'
+	}"
+>
+	<ng-template pTemplate="start">
+		<p-button icon="pi pi-bars" (onClick)="onClick()"></p-button>
+	</ng-template>
+
+	<ng-template pTemplate="end">
+		<div
+			style="
+				display: flex;
+				flex-direction: row;
+				justify-content: space-between;
+				align-items: center;
+				gap: 1em;
+			"
+		>
+			<p-avatar
+				image="https://primefaces.org/cdn/primeng/images/demo/avatar/amyelsner.png"
+				shape="circle"
+			/>
+			<span
+				class="font-bold text-white"
+				[style]="{
+					color: 'var(--primary-color-text)',
+					'font-size': '1.5rem'
+				}"
+			>
+				username
+			</span>
+		</div>
+	</ng-template>
+</p-toolbar>
